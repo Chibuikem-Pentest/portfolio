@@ -40,11 +40,18 @@ python -m http.server 8000
 # then visit http://localhost:8000
 ```
 
-## 📄 Add your resume
+## 📄 Resume
 
-The hero's **Resume** button links to `assets/Chibuikem-Okonkwo-Resume.pdf`.
-Drop your PDF there with that exact name (or update the `href` in
-[index.html](index.html) if you prefer a different filename).
+The hero's **Resume** button links to a Google Doc, exported as PDF on the fly:
+
+```
+https://docs.google.com/document/d/<FILE_ID>/export?format=pdf
+```
+
+Because it exports live, **editing the Google Doc updates the resume on the site
+automatically** — no commit or redeploy needed. The Doc must stay shared as
+*"Anyone with the link → Viewer"*. A copy also lives in `assets/` as an offline
+fallback (not used by the button).
 
 ## 🚀 Deploy (free options)
 
