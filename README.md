@@ -42,16 +42,18 @@ python -m http.server 8000
 
 ## 📄 Resume
 
-The hero's **Resume** button links to a Google Doc, exported as PDF on the fly:
+The hero's **View Resume** button opens an in-page modal that previews the
+resume inline (embedded Google Doc viewer), with **Download** and
+**open-in-new-tab** actions — so visitors can read it without downloading
+anything first. The source is a Google Doc, also exportable as PDF on the fly:
 
 ```
 https://docs.google.com/document/d/<FILE_ID>/export?format=pdf
 ```
 
 Because it exports live, **editing the Google Doc updates the resume on the site
-automatically** — no commit or redeploy needed. The Doc must stay shared as
-*"Anyone with the link → Viewer"*. A copy also lives in `assets/` as an offline
-fallback (not used by the button).
+automatically** — no commit or redeploy needed. Keep the Doc shared as
+*"Anyone with the link → Viewer"* so the preview works for everyone.
 
 ## 🚀 Deploy (free options)
 

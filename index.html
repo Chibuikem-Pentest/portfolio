@@ -12,14 +12,23 @@
 
   <!-- Open Graph / social -->
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chibuikem.dev/" />
+  <meta property="og:site_name" content="Chibuikem Okonkwo" />
   <meta property="og:title" content="Chibuikem Okonkwo — Backend &amp; Application Security Engineer" />
   <meta property="og:description" content="Backend Developer focused on Application Security and the Secure SDLC. Hardened, Zero-Trust microservices with Python (FastAPI) and Node.js." />
   <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://chibuikem.dev/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Chibuikem Okonkwo — Backend &amp; Application Security Engineer" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://chibuikem.dev/assets/og-image.png" />
   <meta name="twitter:title" content="Chibuikem Okonkwo — Backend &amp; Application Security Engineer" />
   <meta name="twitter:description" content="Backend Developer focused on Application Security and the Secure SDLC." />
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://chibuikem.dev/" />
+  <meta name="theme-color" content="#0a0e14" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -85,10 +94,10 @@
         <div class="hero__cta reveal">
           <a href="#projects" class="btn btn--primary">View my work</a>
           <a href="#contact" class="btn btn--ghost">Get in touch</a>
-          <a href="https://docs.google.com/document/d/16BpGRYINHFRfD6LF1TxHbSGQGmzY8aWbmnlMK2vmq6k/export?format=pdf" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Resume
-          </a>
+          <button type="button" class="btn btn--ghost" id="resumeOpen" aria-haspopup="dialog" aria-controls="resumeModal">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Resume
+          </button>
         </div>
 
         <ul class="hero__socials reveal" aria-label="Social links">
@@ -467,6 +476,38 @@
   <button class="to-top" id="toTop" aria-label="Back to top" title="Back to top">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
+
+  <!-- Resume preview modal -->
+  <div class="modal" id="resumeModal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
+      <header class="modal__bar">
+        <div class="modal__dots" aria-hidden="true">
+          <span class="terminal__dot terminal__dot--red"></span>
+          <span class="terminal__dot terminal__dot--amber"></span>
+          <span class="terminal__dot terminal__dot--green"></span>
+        </div>
+        <h2 class="modal__title" id="resumeModalTitle">~/resume.pdf — Chibuikem Okonkwo</h2>
+        <div class="modal__actions">
+          <a class="modal__btn" href="https://docs.google.com/document/d/16BpGRYINHFRfD6LF1TxHbSGQGmzY8aWbmnlMK2vmq6k/export?format=pdf" target="_blank" rel="noopener noreferrer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span class="modal__btn-label">Download</span>
+          </a>
+          <a class="modal__btn" href="https://docs.google.com/document/d/16BpGRYINHFRfD6LF1TxHbSGQGmzY8aWbmnlMK2vmq6k/preview" target="_blank" rel="noopener noreferrer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            <span class="modal__btn-label">New tab</span>
+          </a>
+          <button type="button" class="modal__close" id="resumeClose" aria-label="Close resume preview">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      </header>
+      <div class="modal__body">
+        <p class="modal__loading">Loading resume...</p>
+        <iframe id="resumeFrame" title="Resume of Chibuikem Okonkwo" loading="lazy" data-src="https://docs.google.com/document/d/16BpGRYINHFRfD6LF1TxHbSGQGmzY8aWbmnlMK2vmq6k/preview"></iframe>
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.js" defer></script>
 </body>
