@@ -1,3 +1,6 @@
+# Local branding assets (LinkedIn banner, etc.) — not part of the deployed site
+branding/
+
 # OS
 .DS_Store
 Thumbs.db

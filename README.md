@@ -42,18 +42,17 @@ python -m http.server 8000
 
 ## 📄 Resume
 
-The hero's **View Resume** button opens an in-page modal that previews the
-resume inline (embedded Google Doc viewer), with **Download** and
-**open-in-new-tab** actions — so visitors can read it without downloading
-anything first. The source is a Google Doc, also exportable as PDF on the fly:
+The hero's **View Resume** button opens the live Google Doc in a new tab using
+Google's read-only preview view (`/preview`) — visitors read it in the browser,
+nothing is force-downloaded. The same Doc is also exportable as PDF on the fly:
 
 ```
 https://docs.google.com/document/d/<FILE_ID>/export?format=pdf
 ```
 
-Because it exports live, **editing the Google Doc updates the resume on the site
+Because it serves live, **editing the Google Doc updates the resume everywhere
 automatically** — no commit or redeploy needed. Keep the Doc shared as
-*"Anyone with the link → Viewer"* so the preview works for everyone.
+*"Anyone with the link → Viewer"* so it opens for everyone.
 
 ## 🚀 Deploy (free options)
 
