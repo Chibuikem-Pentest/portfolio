@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+
+  <title>Chibuikem Okonkwo — Backend &amp; Application Security Engineer</title>
+  <meta name="description" content="Chibuikem Okonkwo — Backend Developer focused on Application Security (AppSec) and the Secure SDLC. Building hardened, Zero-Trust microservices with Python (FastAPI) and Node.js." />
+  <meta name="author" content="Chibuikem Okonkwo" />
+  <meta name="keywords" content="Chibuikem Okonkwo, Backend Developer, Application Security, AppSec, SSDLC, Cybersecurity, FastAPI, Python, Node.js, Zero Trust, OAuth2, JWT, PKI, Penetration Testing" />
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Chibuikem Okonkwo — Backend &amp; Application Security Engineer" />
+  <meta property="og:description" content="Backend Developer focused on Application Security and the Secure SDLC. Hardened, Zero-Trust microservices with Python (FastAPI) and Node.js." />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Chibuikem Okonkwo — Backend &amp; Application Security Engineer" />
+  <meta name="twitter:description" content="Backend Developer focused on Application Security and the Secure SDLC." />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Decorative animated background -->
+  <canvas id="matrix" aria-hidden="true"></canvas>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="brand" aria-label="Home">
+        <span class="brand__bracket">[</span><span class="brand__name">CO</span><span class="brand__bracket">]</span>
+        <span class="brand__dot" aria-hidden="true"></span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about"><span class="nav__num">01.</span> About</a>
+        <a href="#skills"><span class="nav__num">02.</span> Skills</a>
+        <a href="#experience"><span class="nav__num">03.</span> Experience</a>
+        <a href="#projects"><span class="nav__num">04.</span> Projects</a>
+        <a href="#certs"><span class="nav__num">05.</span> Certs</a>
+        <a href="#contact" class="nav__cta">Contact</a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+      <a href="#about"><span class="nav__num">01.</span> About</a>
+      <a href="#skills"><span class="nav__num">02.</span> Skills</a>
+      <a href="#experience"><span class="nav__num">03.</span> Experience</a>
+      <a href="#projects"><span class="nav__num">04.</span> Projects</a>
+      <a href="#certs"><span class="nav__num">05.</span> Certifications</a>
+      <a href="#contact">06. Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+      <div class="hero__inner">
+        <p class="hero__greeting reveal"><span class="prompt">$</span> Hi, my name is</p>
+        <h1 class="hero__name reveal" data-text="Chibuikem Okonkwo">Chibuikem Okonkwo</h1>
+        <h2 class="hero__tagline reveal">I build <span class="accent">hardened</span> backend systems.</h2>
+        <p class="hero__blurb reveal">
+          Backend Developer with a focus on <strong>Application Security (AppSec)</strong> and the
+          <strong>Secure SDLC</strong>. I design Zero-Trust, event-driven microservices in
+          Python&nbsp;(FastAPI) and Node.js — and break things on CTF platforms for fun.
+        </p>
+
+        <div class="hero__cta reveal">
+          <a href="#projects" class="btn btn--primary">View my work</a>
+          <a href="#contact" class="btn btn--ghost">Get in touch</a>
+          <a href="assets/Chibuikem%20Okonkwo%20-%20Resume.pdf" class="btn btn--ghost" download>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Resume
+          </a>
+        </div>
+
+        <ul class="hero__socials reveal" aria-label="Social links">
+          <li>
+            <a href="https://linkedin.com/in/chibuikem-okonkwo-39144617b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:okonkwochibuikem50@gmail.com" aria-label="Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+2349035551509" aria-label="Phone">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Terminal card -->
+      <div class="hero__terminal reveal" aria-hidden="true">
+        <div class="terminal">
+          <div class="terminal__bar">
+            <span class="terminal__dot terminal__dot--red"></span>
+            <span class="terminal__dot terminal__dot--amber"></span>
+            <span class="terminal__dot terminal__dot--green"></span>
+            <span class="terminal__title">chibuikem@secops: ~</span>
+          </div>
+          <div class="terminal__body" id="terminalBody"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about">
+      <h2 class="section__title"><span class="section__num">01.</span> whoami<span class="section__line"></span></h2>
+      <div class="about">
+        <div class="about__text">
+          <p>
+            I'm a cybersecurity-aspiring backend developer who treats security as a property of the
+            build, not a bolt-on. My day-to-day is architecting hardened backend infrastructure —
+            and my nights are spent on <strong>Hack&nbsp;The&nbsp;Box</strong> and
+            <strong>TryHackMe</strong> learning how attackers think.
+          </p>
+          <p>
+            At <strong>Emutare</strong> (Perth, Western Australia, remote) I help build a
+            distributed platform of FastAPI microservices secured with a Zero-Trust, PKI-backed
+            event bus. I'm comfortable across <strong>OAuth2 / OpenID Connect</strong>,
+            <strong>RBAC/ABAC</strong>, cryptography, and the practical realities of shipping secure
+            software through the <strong>SSDLC</strong>.
+          </p>
+          <p>Technologies I reach for most often:</p>
+          <ul class="about__stack">
+            <li>Python (FastAPI)</li>
+            <li>Node.js (Express)</li>
+            <li>PostgreSQL</li>
+            <li>RabbitMQ / Kafka</li>
+            <li>Docker</li>
+            <li>Linux (Kali/Ubuntu)</li>
+          </ul>
+        </div>
+
+        <aside class="about__stats" aria-label="Key metrics">
+          <div class="stat">
+            <span class="stat__num" data-count="400" data-suffix="%">0%</span>
+            <span class="stat__label">microservices architecture scaled</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="7" data-suffix="">0</span>
+            <span class="stat__label">core distributed services shipped</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="9" data-suffix="+">0</span>
+            <span class="stat__label">certifications &amp; trainings</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="2" data-suffix="+ yrs">0</span>
+            <span class="stat__label">building secure backends</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section" id="skills">
+      <h2 class="section__title"><span class="section__num">02.</span> arsenal<span class="section__line"></span></h2>
+      <div class="skills">
+        <article class="skill-card reveal">
+          <h3 class="skill-card__title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Security Engineering
+          </h3>
+          <ul class="tag-list">
+            <li>OAuth2 / OIDC</li><li>JWT</li><li>RBAC / ABAC</li><li>Zero Trust</li>
+            <li>SQLi mitigation</li><li>XSS prevention</li><li>AES / RSA</li><li>Rate limiting</li>
+            <li>PKI</li>
+          </ul>
+        </article>
+
+        <article class="skill-card reveal">
+          <h3 class="skill-card__title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            Security Tools
+          </h3>
+          <ul class="tag-list">
+            <li>Wireshark</li><li>Nmap</li><li>Burp Suite</li><li>Metasploit</li>
+            <li>OWASP ZAP</li><li>SAST</li><li>DAST</li>
+          </ul>
+        </article>
+
+        <article class="skill-card reveal">
+          <h3 class="skill-card__title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Languages &amp; Frameworks
+          </h3>
+          <ul class="tag-list">
+            <li>Python</li><li>FastAPI</li><li>JavaScript</li><li>Node.js / Express</li>
+            <li>Bash</li><li>PowerShell</li><li>SQL</li>
+          </ul>
+        </article>
+
+        <article class="skill-card reveal">
+          <h3 class="skill-card__title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/><line x1="6" y1="16" x2="6.01" y2="16"/><line x1="10" y1="16" x2="10.01" y2="16"/></svg>
+            Infrastructure &amp; DevOps
+          </h3>
+          <ul class="tag-list">
+            <li>Linux (Ubuntu/Kali)</li><li>Docker</li><li>Git</li><li>GCP</li>
+            <li>Cloud KMS / Vaults</li><li>RabbitMQ</li><li>Kafka</li>
+          </ul>
+        </article>
+
+        <article class="skill-card reveal">
+          <h3 class="skill-card__title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            Networking
+          </h3>
+          <ul class="tag-list">
+            <li>TCP/IP</li><li>VPN tunneling</li><li>Firewalls</li><li>DNS security</li>
+            <li>Switching &amp; routing</li>
+          </ul>
+        </article>
+
+        <article class="skill-card reveal">
+          <h3 class="skill-card__title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>
+            Offensive Security
+          </h3>
+          <ul class="tag-list">
+            <li>Web exploitation</li><li>Privilege escalation</li><li>OSINT</li>
+            <li>CTF</li><li>Vulnerability research</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section class="section" id="experience">
+      <h2 class="section__title"><span class="section__num">03.</span> experience<span class="section__line"></span></h2>
+      <div class="timeline">
+
+        <article class="tl-item reveal">
+          <div class="tl-item__marker" aria-hidden="true"></div>
+          <div class="tl-item__content">
+            <div class="tl-item__head">
+              <h3>Junior Security Software Engineer <span class="tl-item__at">@ Emutare</span></h3>
+              <span class="tl-item__date">Feb 2026 — Present</span>
+            </div>
+            <p class="tl-item__meta">Perth, Western Australia · Remote</p>
+            <ul class="tl-item__points">
+              <li>Scaled the enterprise microservices architecture by <strong>400%</strong>, architecting and deploying <strong>7 core distributed services</strong> in Python (FastAPI) backed by relational databases.</li>
+              <li>Designed a <strong>Zero-Trust, event-driven backbone</strong> over asynchronous messaging, with a <strong>PKI layer</strong> securing inter-service communication.</li>
+              <li>Contributed to a next-gen <strong>Identity &amp; Access Management</strong> platform — hardware-backed auth (TPM), passkeys, and multi-factor protocols.</li>
+              <li>Spearheaded migration of secrets to <strong>cloud-native KMS vaults</strong>, enforcing strict encryption-at-rest.</li>
+              <li>Containerized and orchestrated services for service discovery and high availability across environments.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tl-item reveal">
+          <div class="tl-item__marker" aria-hidden="true"></div>
+          <div class="tl-item__content">
+            <div class="tl-item__head">
+              <h3>Security Software Developer Intern <span class="tl-item__at">@ Emutare</span></h3>
+              <span class="tl-item__date">Feb 2025 — Jan 2026</span>
+            </div>
+            <p class="tl-item__meta">Perth, Western Australia · Remote</p>
+            <ul class="tl-item__points">
+              <li>Contributed to the foundational architecture of an enterprise microservices platform, implementing scalable messaging with <strong>Node.js</strong> and NoSQL/AMQP.</li>
+              <li>Provisioned secure cloud-native environments for staging and integration testing with strict network access controls.</li>
+              <li>Authored technical API documentation and implemented initial <strong>RBAC</strong> logic to secure service-to-service communication.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tl-item reveal">
+          <div class="tl-item__marker" aria-hidden="true"></div>
+          <div class="tl-item__content">
+            <div class="tl-item__head">
+              <h3>Cybersecurity Intern <span class="tl-item__at">@ Prodigy InfoTech</span></h3>
+              <span class="tl-item__date">Nov 2024 — Dec 2024</span>
+            </div>
+            <p class="tl-item__meta">Remote</p>
+            <ul class="tl-item__points">
+              <li>Developed custom Python utilities for <strong>AES-256 encryption</strong> and secure hashing (data-at-rest protection).</li>
+              <li>Analyzed PCAP captures in <strong>Wireshark</strong>, flagging insecure protocols (Telnet, HTTP) and recommending TLS upgrades.</li>
+              <li>Built an entropy-based <strong>password strength analyzer</strong> simulating dictionary and brute-force resistance.</li>
+              <li>Researched keylogging mechanics to develop signature-based detection patterns.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tl-item reveal">
+          <div class="tl-item__marker" aria-hidden="true"></div>
+          <div class="tl-item__content">
+            <div class="tl-item__head">
+              <h3>Penetration Tester <span class="tl-item__at">· CTF Competitor</span></h3>
+              <span class="tl-item__date">2023 — Present</span>
+            </div>
+            <p class="tl-item__meta">Hack The Box · TryHackMe · Africa CyberFest</p>
+            <ul class="tl-item__points">
+              <li>Actively exploiting machines on <strong>Hack The Box</strong> and <strong>TryHackMe</strong>, focused on privilege escalation and web exploitation.</li>
+              <li>Executed <strong>OSINT</strong> to map attack surfaces during simulated red-team engagements.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="section" id="projects">
+      <h2 class="section__title"><span class="section__num">04.</span> selected work<span class="section__line"></span></h2>
+      <p class="section__intro">A few things I've built or broken — distilled from production work and hands-on security research.</p>
+
+      <div class="projects">
+        <article class="project reveal">
+          <div class="project__top">
+            <svg class="project__folder" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            <span class="project__tag">Production</span>
+          </div>
+          <h3 class="project__title">Zero-Trust Event Backbone</h3>
+          <p class="project__desc">An asynchronous, event-driven message bus connecting 7 FastAPI microservices, with a PKI layer issuing and verifying certificates so no service implicitly trusts another.</p>
+          <ul class="project__stack"><li>FastAPI</li><li>RabbitMQ</li><li>PKI</li><li>PostgreSQL</li></ul>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__top">
+            <svg class="project__folder" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span class="project__tag">Production</span>
+          </div>
+          <h3 class="project__title">Next-Gen IAM Platform</h3>
+          <p class="project__desc">Identity &amp; Access Management with hardware-backed authentication (TPM), passkeys, and layered MFA — moving auth from "passwords" to phishing-resistant credentials.</p>
+          <ul class="project__stack"><li>OAuth2 / OIDC</li><li>WebAuthn</li><li>TPM</li><li>RBAC/ABAC</li></ul>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__top">
+            <svg class="project__folder" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+            <span class="project__tag">Production</span>
+          </div>
+          <h3 class="project__title">Hardened Secrets Management</h3>
+          <p class="project__desc">Led migration of sensitive credentials out of config and into cloud-native KMS vaults, enforcing encryption-at-rest and tight, auditable access policies.</p>
+          <ul class="project__stack"><li>Cloud KMS</li><li>GCP</li><li>Encryption-at-rest</li></ul>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__top">
+            <svg class="project__folder" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg>
+            <span class="project__tag">Research</span>
+          </div>
+          <h3 class="project__title">AES-256 Crypto Toolkit</h3>
+          <p class="project__desc">Custom Python utilities for AES-256 encryption and secure hashing — a practical study in correct key handling, IVs, and authenticated encryption for data-at-rest.</p>
+          <ul class="project__stack"><li>Python</li><li>AES-256</li><li>Hashing</li></ul>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__top">
+            <svg class="project__folder" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20v-6M6 20V10M18 20V4"/></svg>
+            <span class="project__tag">Research</span>
+          </div>
+          <h3 class="project__title">Entropy Password Analyzer</h3>
+          <p class="project__desc">A strength analyzer that scores passwords by entropy and simulates dictionary and brute-force resistance — turning "is this strong?" into a measurable answer.</p>
+          <ul class="project__stack"><li>Python</li><li>Entropy</li><li>Threat modeling</li></ul>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__top">
+            <svg class="project__folder" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 14 3-3 3 3 5-5"/></svg>
+            <span class="project__tag">Research</span>
+          </div>
+          <h3 class="project__title">PCAP Traffic Analysis</h3>
+          <p class="project__desc">Captured and dissected network traffic in Wireshark to surface cleartext protocols (Telnet, HTTP), document the exposure, and recommend TLS-based remediation.</p>
+          <ul class="project__stack"><li>Wireshark</li><li>TCP/IP</li><li>TLS</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== CERTIFICATIONS & EDUCATION ===================== -->
+    <section class="section" id="certs">
+      <h2 class="section__title"><span class="section__num">05.</span> credentials<span class="section__line"></span></h2>
+
+      <h3 class="subhead">Certifications &amp; Training</h3>
+      <div class="certs">
+        <div class="cert reveal"><span class="cert__issuer">Cisco</span><span class="cert__name">CCNA — Introduction to Networks</span></div>
+        <div class="cert reveal"><span class="cert__issuer">Cisco</span><span class="cert__name">CCNA — Switching, Routing &amp; Wireless Essentials</span></div>
+        <div class="cert reveal"><span class="cert__issuer">Cisco</span><span class="cert__name">CCNA — Enterprise Networking, Security &amp; Automation</span></div>
+        <div class="cert reveal"><span class="cert__issuer">The SecOps Group</span><span class="cert__name">CNSP — Certified Network Security Practitioner</span></div>
+        <div class="cert reveal"><span class="cert__issuer">Cisco</span><span class="cert__name">CyberOps Associate</span></div>
+        <div class="cert reveal"><span class="cert__issuer">Cisco</span><span class="cert__name">DevNet Associate</span></div>
+        <div class="cert reveal"><span class="cert__issuer">Cisco</span><span class="cert__name">Python Essentials 1</span></div>
+        <div class="cert reveal"><span class="cert__issuer">Digital Regenesys</span><span class="cert__name">Cybersecurity Defence Toolbox</span></div>
+        <div class="cert reveal"><span class="cert__issuer">Lagos, Nigeria</span><span class="cert__name">Africa CyberFest CTF Competition (2024)</span></div>
+      </div>
+
+      <h3 class="subhead">Education</h3>
+      <div class="education">
+        <article class="edu reveal">
+          <div class="edu__head">
+            <h4>University of Lagos</h4>
+            <span class="edu__date">2019 — 2024</span>
+          </div>
+          <p class="edu__degree">B.Sc. (Ed.) Mathematics · <span class="accent">Second Class Upper</span></p>
+          <p class="edu__meta">Lagos, Nigeria</p>
+        </article>
+        <article class="edu reveal">
+          <div class="edu__head">
+            <h4>University of the People</h4>
+            <span class="edu__date">2018 — 2024</span>
+          </div>
+          <p class="edu__degree">B.Sc. Computer Science · <span class="accent">Cum Laude</span></p>
+          <p class="edu__meta">Online · Coursework: Communications &amp; Networking, Systems &amp; Application Security, Advanced Networking &amp; Data Security</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section section--contact" id="contact">
+      <p class="contact__pre"><span class="section__num">06.</span> get in touch</p>
+      <h2 class="contact__title">Let's build something secure.</h2>
+      <p class="contact__blurb">
+        I'm open to backend and application-security roles, collaborations, and CTF teams.
+        Whether you have a question, an opportunity, or a vulnerability to discuss responsibly —
+        my inbox is open.
+      </p>
+      <a href="mailto:okonkwochibuikem50@gmail.com" class="btn btn--primary btn--lg">Say hello</a>
+
+      <ul class="contact__list" aria-label="Contact details">
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <a href="mailto:okonkwochibuikem50@gmail.com">okonkwochibuikem50@gmail.com</a>
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+2349035551509">+234 903 555 1509</a>
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          <a href="https://linkedin.com/in/chibuikem-okonkwo-39144617b" target="_blank" rel="noopener noreferrer">linkedin.com/in/chibuikem-okonkwo</a>
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Lagos, Nigeria</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__line"><span class="prompt">$</span> echo "Designed &amp; built by Chibuikem Okonkwo"</p>
+    <p class="footer__sub">with HTML, CSS &amp; vanilla JS · <span id="year">2026</span></p>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
