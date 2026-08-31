@@ -1,0 +1,7 @@
+# Files kept in the repo but NOT uploaded to the deployment.
+# Vercel serves this project straight from the repo root (no build step),
+# so anything committed here is otherwise publicly reachable.
+# Vercel already excludes README.md and dotfiles by default.
+
+# Resume source — the published copy lives in the linked Google Doc.
+RESUME.md
