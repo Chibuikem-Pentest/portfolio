@@ -134,12 +134,12 @@
     // Each entry: type a line, then output instantly (or skip).
     const lines = [
       { type: true,  html: '<span class="prompt">$</span> whoami' },
-      { type: false, html: '<span class="t-ok">chibuikem_okonkwo</span> — Backend &amp; AppSec Engineer' },
+      { type: false, html: '<span class="t-ok">chibuikem_okonkwo</span> — Full-Stack Engineer &middot; AppSec' },
       { type: true,  html: '<span class="prompt">$</span> cat focus.txt' },
-      { type: false, html: '<span class="t-out">Secure SDLC · Zero-Trust · Threat modeling</span>' },
+      { type: false, html: '<span class="t-out">Secure SDLC · Identity &amp; Access · Zero-Trust</span>' },
       { type: true,  html: '<span class="prompt">$</span> ./scan --stack' },
-      { type: false, html: '<span class="t-key">[python]</span> <span class="t-key">[fastapi]</span> <span class="t-key">[node.js]</span>' },
-      { type: false, html: '<span class="t-key">[oauth2]</span> <span class="t-key">[jwt]</span> <span class="t-key">[pki]</span> <span class="t-key">[rbac]</span>' },
+      { type: false, html: '<span class="t-key">[typescript]</span> <span class="t-key">[react]</span> <span class="t-key">[python]</span> <span class="t-key">[fastapi]</span>' },
+      { type: false, html: '<span class="t-key">[oauth2]</span> <span class="t-key">[webauthn]</span> <span class="t-key">[postgres]</span> <span class="t-key">[kafka]</span>' },
       { type: true,  html: '<span class="prompt">$</span> status' },
       { type: false, html: '<span class="t-ok">&#9679; available for opportunities</span>' },
     ];
